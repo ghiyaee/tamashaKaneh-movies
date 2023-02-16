@@ -14,9 +14,9 @@ const HomePage = async () => {
       <div className="flex justify-center flex-wrap gap-8 mt-[5rem] ">
         {data.data.map((movie, i) => (
           <div className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col ">
-            <div className="flex justify-center">
+            <div className="flex justify-center cursor-pointer">
               <Image
-                className="rounded-lg   "
+                className="rounded-lg"
                 width={260}
                 height={200}
                 alt={movie.title}
