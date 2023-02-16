@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 const BlogLayout = ({ children }) => {
   return (
     <html lang="fa:IR">
-      <body>
+      <body >
         <Header />
         {children}
         <Footer/>

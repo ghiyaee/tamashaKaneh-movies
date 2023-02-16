@@ -11,9 +11,9 @@ const HomePage = async () => {
   console.log(data);
   return (
     <main className="py-5">
-      <div className="flex justify-center flex-wrap gap-6 ">
+      <div className="flex justify-center flex-wrap gap-8 mt-[5rem] ">
         {data.data.map((movie, i) => (
-          <div className="w-[25rem] h-[30rem] shadow-xl rounded-lg  p-4 flex-col ">
+          <div className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col ">
             <div className="flex justify-center">
               <Image
                 className="rounded-lg   "

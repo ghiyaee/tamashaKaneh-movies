@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
 const Header = () => {
   return (
-    <header className="bg-blue-500 flex justify-center items-center h-[10vh]">
+    <header className="bg-blue-500 flex justify-center items-center h-[10vh] w-[100vw] fixed">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link className="text-white text-3xl flex gap-4 items-center transition-all duration-200 hover:text-yellow-200 " href={'/'}>
