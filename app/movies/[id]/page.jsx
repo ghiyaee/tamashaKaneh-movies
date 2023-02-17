@@ -23,7 +23,8 @@ const SingelMovie = async ({ params }) => {
         <div>{` بازیگران :${movie.actors}`}</div>
         <div className="flex gap-4  mt-[2.8rem]">
           {movie.images.map((movie, i) => (
-            <Image className="rounded-lg transition-all duration-1000 hover:scale-150 cursor-pointer" width={350} height={400} src={movie} key={i} />
+              <Image className="rounded-lg transition-all duration-1000 hover:scale-150 cursor-pointer"
+                  width={350} height={400} src={movie} key={i} />
           ))}
         </div>
       </section>
