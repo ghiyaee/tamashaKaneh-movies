@@ -6,9 +6,8 @@ const Loading = () => {
           width={150}
           height={150}
           alt="is run loading....."
-          src={'../public/loading.svg'}
-        />
-        ......loading
+          src={'/loading.svg'}
+          />
       </div>
     );
 }
