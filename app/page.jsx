@@ -1,28 +1,30 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
 const dataMovies = async () => {
-  const result = await fetch('https://moviesapi.ir/api/v1/movies?page={page}', {
+  const data = await fetch('https://moviesapi.ir/api/v1/movies?page={page}', {
     caches: 'no-store',
   });
-  return result.json();
+  return data.json();
 };
+
 const HomePage = async () => {
   const data = await dataMovies();
-  console.log(data);
   return (
-    <main className="py-5">
+    <main >
       <div className="flex justify-center flex-wrap gap-8 mt-[5rem] ">
         {data.data.map((movie, i) => (
-          <div className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col ">
-            <div className="flex justify-center cursor-pointer">
-              <Image
-                className="rounded-lg"
-                width={260}
-                height={200}
-                alt={movie.title}
-                src={movie.poster}
-              />
-            </div>
+          <div key={i} className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col ">
+            <Link href={`/movies/${movie.id}`}>
+              <div className="flex justify-center ">
+                <Image
+                  className="rounded-lg"
+                  width={260}
+                  height={200}
+                  alt={movie.title}
+                  src={movie.poster}
+                />
+              </div>
+            </Link>
             <div className="text-lg text-center">
               <h3 className="pt-4 text-bold">{movie.title}</h3>
               <div className="flex justify-between">
