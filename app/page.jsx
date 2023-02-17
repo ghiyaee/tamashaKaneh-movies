@@ -11,7 +11,7 @@ const HomePage = async () => {
   const data = await dataMovies();
   return (
     <main >
-      <div className="flex justify-center flex-wrap gap-8 mt-[5rem] ">
+      <div className="flex justify-center flex-wrap gap-8  p-8">
         {data.data.map((movie, i) => (
           <div key={i} className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col ">
             <Link href={`/movies/${movie.id}`}>

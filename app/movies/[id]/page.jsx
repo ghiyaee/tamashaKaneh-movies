@@ -17,7 +17,8 @@ const SingelMovie = async ({ params }) => {
         <div>{`کارگردان :${movie.director}`}</div>
         <div>{`کشور سازنده :${movie.country}`}</div>
         <div>{` امیتاز کسب شده :${movie.imdb_rating}`}</div>
-        <div className="flex gap-4  mt-[5.8rem]">
+        <div>{` بازیگران :${movie.actors}`}</div>
+        <div className="flex gap-4  mt-[2.8rem]">
           {movie.images.map((m, i) => (
             <Image className="rounded-lg " width={350} height={400} src={m} />
           ))}
