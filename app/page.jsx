@@ -12,7 +12,7 @@ const dataMovies = async () => {
 const HomePage = async () => {
   const data = await dataMovies();
   return (
-    <main className="">
+    <main className="bg-blue-50">
       <>
         <title>تماشاخانه</title>
         <meta name='description' content='تماشاخانه' />
