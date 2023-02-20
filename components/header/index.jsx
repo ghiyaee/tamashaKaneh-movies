@@ -24,7 +24,7 @@ const Header = () => {
               <li>
                 <Link
                   className="w-20 h-8 text-lg font-bold bg-white flex justify-center items-center rounded-md transition-all duration-200 hover:bg-yellow-200 "
-                  href={'/movies'}
+                  href={'/search'}
                 >
                   جستجو
                 </Link>
