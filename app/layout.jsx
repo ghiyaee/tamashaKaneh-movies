@@ -2,10 +2,12 @@ import '../styles/globals.css';
 import '../components/header';
 import Header from '../components/header';
 import Footer from '@/components/footer';
+import Head from './head';
 const BlogLayout = ({ children }) => {
   return (
     <html lang="fa:IR">
       <body >
+        <Head/>
         <Header />
         {children}
         <Footer/>
