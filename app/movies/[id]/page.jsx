@@ -22,7 +22,7 @@ const SingelMovie = async ({ params }) => {
         <div>{` امیتاز کسب شده :${movie.imdb_rating}`}</div>
         <div>{` بازیگران :${movie.actors}`}</div>
 
-        <div className="flex gap-4 justify-start mt-[5.8rem]">
+        <div className="flex gap-8 justify-start mt-[5.8rem]">
           {movie.images.map((movie, i) => (
             <Image
               className="rounded-lg transition-all duration-1000 hover:scale-150 cursor-pointer"
@@ -35,16 +35,9 @@ const SingelMovie = async ({ params }) => {
           ))}
         </div>
       </section>
-      <div className="w-[200] h-[200] ">
-        {/* <Image
-          alt='img'
-          width={400}
-          height={260}
-          src={movie.poster}
-          className="rounded-lg"
-        /> */}
+      <div className=" ">
         {movie.id === 2 ? (
-          <video className="w-[100%] rounded-lg" controls>
+          <video className="w-[100%] rounded-lg" controls autoPlay>
             <source src="https://aspb14.asset.aparat.com/aparat-video/137842034f6b486673d83c8520bd620118070579-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6Ijk4NWExYjhjM2Q3MWE4YzllNzUyMDJlMzRjYjQ1NjY1IiwiZXhwIjoxNjc2OTg2NjM1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.is0ZohB9mx-hdvg1eBT41N30gsy3WaGUwfgc3p-zk7o" />
             Your browser does not support the video tag.
           </video>
@@ -52,7 +45,7 @@ const SingelMovie = async ({ params }) => {
           ''
         )}
         {movie.id === 3 ? (
-          <video className="w-[100%] rounded-lg" controls>
+          <video className="w-[100%] rounded-lg" controls autoPlay>
             <source src="https://aspb15.asset.aparat.com/aparat-video/2130e836645c4dc8b94d34bf03f1bc708248130-480p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImU0ZTYyY2IzYjg5MTAzNjRmNWFlYTA2N2I4ZTQ4N2E5IiwiZXhwIjoxNjc2OTE0NzI4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.vlVVcXkQBO7RTDFST1L6smO-24MYhPouDIlBUJ04hvI" />
             Your browser does not support the video tag.
           </video>
@@ -60,7 +53,7 @@ const SingelMovie = async ({ params }) => {
           ''
         )}
         {movie.id === 9 ? (
-          <video className="w-[100%] rounded-lg" controls>
+          <video className="w-[100%] rounded-lg" controls autoPlay>
             <source src="https://as3.asset.aparat.com/aparat-video/c7d6c18f5af8377db0e780104046aa6317016688-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjVkODAyZTc3YjBkZWZjZDMxMzIzYzg2MGU4MWM0N2FkIiwiZXhwIjoxNjc2OTE1MDg4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.Kj9yO06qret_QRsXvnnVeFHHcM9bGvtGEWkhr1FEy1Q " />
             Your browser does not support the video tag.
           </video>
