@@ -64,7 +64,6 @@ const Search = () => {
                         ))
                       : ''}
                   </div>
-
                   <div className='w-[40rem]'>
                     <Image
                       alt="img"
