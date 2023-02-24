@@ -20,11 +20,11 @@ const Search = () => {
   };
 
   return (
-    <div className=" p-8  ">
-      <div className="shadow-2xl text-2xl rounded-md flex justify-center">
-        <form onSubmit={handelSubmit}>
+    <div className=" p-4 ">
+      <div className="shadow-2xl text-xl rounded-md ">
+        <form onSubmit={handelSubmit} className="flex justify-center flex-wrap">
           <input
-            placeholder="دراینجافیلم موردنظراز1تا50واردکنید"
+            placeholder="برای دیدن فیلم از1تا50واردکنید"
             className="outline-none w-96 p-4"
             onChange={(e) => setMoviesId(e.target.value)}
           />
