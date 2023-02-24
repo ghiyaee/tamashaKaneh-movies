@@ -42,20 +42,21 @@ const Search = () => {
             <div className="flex flex-col gap-5 p-8 border m-5 rounded-lg">
               <div>
                 <div className="flex justify-center gap-7 items-center">
-                  <div className="text-3xl">
-                    <h1>{`نام فلیم :${movie.title}`}</h1>
-                    <div>{`سال ساخت :${movie.year}`}</div>
-                    <div>{`کشور سازنده :${movie.country}`}</div>
-                    <div>{`امتیاز کسب شده :${movie.imdb_rating}`}</div>
-                    <div>{`ژانر فلیم :${movie.genres}`}</div>
-                    <div>{` بازیگران :${movie.actors}`}</div>
+                  <div className="text-2xl ">
+                    <h1 className='mb-4'>{`نام فلیم :${movie.title}`}</h1>
+                    <div className='mb-4'>{`سال ساخت :${movie.year}`}</div>
+                    <div className='mb-4'>{`کشور سازنده :${movie.country}`}</div>
+                    <div className='mb-4'>{`امتیاز کسب شده :${movie.imdb_rating}`}</div>
+                    <div className='mb-4'>{`ژانر فلیم :${movie.genres}`}</div>
+                    <div className='mb-4'>{` بازیگران :${movie.actors}`}</div>
+                    <div className='mb-4'>{` داستان فیلم :${movie.plot}`}</div>
                   </div>
-                  <div>
+                  <div className='w-[26rem]'>
                     {movie
                       ? movie.images.map((img) => (
                           <Image
                             alt="img"
-                            width={250}
+                            width={350}
                             height={250}
                             src={img}
                             className="transition-all duration-1000 hover:scale-150 rounded-lg mb-6"
@@ -64,7 +65,7 @@ const Search = () => {
                       : ''}
                   </div>
 
-                  <div>
+                  <div className='w-[40rem]'>
                     <Image
                       alt="img"
                       width={350}
