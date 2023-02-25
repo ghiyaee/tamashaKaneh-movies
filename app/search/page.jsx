@@ -1,7 +1,7 @@
 'use client';
 import SearchBar from '@/components/serachbar';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 const Search = () => {
   const [movieId, setMoviesId] = useState('');
@@ -20,23 +20,23 @@ const Search = () => {
   };
 
   return (
-    <div className=" p-4 ">
-      <div className="shadow-2xl text-xl rounded-md ">
+    <>
+      <section className=" text-xl rounded-md p-4">
         <form onSubmit={handelSubmit} className="flex justify-center flex-wrap">
           <input
-            placeholder="برای دیدن فیلم از1تا50واردکنید"
-            className="outline-none w-96 p-4"
+            placeholder="برای دیدن فیلم از1 تا 50 واردکنید"
+            className="outline-none w-96 p-4 shadow-2xl"
             onChange={(e) => setMoviesId(e.target.value)}
           />
           <button
-            className="bg-red-500 text-white px-4 py-1 rounded-md"
+            className="bg-red-500 text-white px-4 py-1  rounded-md"
             onClick={fetchData}
           >
             جستجو
           </button>
         </form>
-      </div>
-      <main className="mt-8 bg-black text-white rounded-lg">
+      </section>
+      <main className="mt-8 bg-black text-white  rounded-lg">
         {movie ? (
           <div>
             <div className="flex flex-col gap-5 p-8  m-5 ">
@@ -81,7 +81,7 @@ const Search = () => {
           ''
         )}
       </main>
-    </div>
+    </>
   );
 };
 export default Search;

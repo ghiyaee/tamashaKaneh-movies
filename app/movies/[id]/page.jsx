@@ -12,7 +12,7 @@ const SingelMovie = async ({ params }) => {
     return Not_found();
   }
   return (
-    <main className=" p-6  shadow-2xl rounded-lg m-6 bg-black text-white">
+    <main className=" p-6  shadow-2xl rounded-lg m-6 bg-black text-white ">
       <section className="sm:text-[2rem]  flex justify-around flex-wrap">
         <div>
           <h1>{`نام فیلم :${movie.title}`}</h1>
