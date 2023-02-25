@@ -36,7 +36,7 @@ const Search = () => {
           </button>
         </form>
       </section>
-      <main className="mt-8 bg-black text-white  rounded-lg">
+      <main className="mt-8 bg-black text-white rounded-lg">
         {movie ? (
           <div>
             <div className="flex flex-col gap-5 p-8  m-5 ">
