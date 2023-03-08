@@ -26,6 +26,50 @@ a {
 .hiden{
   display: none
 }
+
+.hamber-top,.hamber-mid,.hamber-bot{
+  width:32px;
+  height:3px;
+  background:white;
+  position:absolute;
+  top:15px;
+}
+
+.hamber-mid{
+  transform:translateY(7px);
+}
+.hamber-bot{
+  transform:translateY(14px);
+}
+
+.open{
+  transform:rotate(90deg)
+}
+
+.open .hamber-top{
+  transform:rotate(45deg) 
+}
+.open .hamber-mid{
+  display:none
+}
+.open .hamber-bot{
+  transform:rotate(-45deg) 
+}
+
+.close{
+  transform:rotate(0deg)
+}
+.close .hamber-top{
+  transform:rotate(0deg) 
+}
+.close .hamber-mid{
+  display:block
+}
+.close .hamber-bot{
+  transform:rotate(0deg) translateY(14px)
+  
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

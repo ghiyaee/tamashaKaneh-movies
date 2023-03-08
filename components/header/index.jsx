@@ -1,20 +1,31 @@
+'use client';
+import React from 'react';
 import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
+import { useState } from 'react';
 const Header = () => {
+  const [state,setState]=useState('close')
+  // const ref = React.createRef();
+
+  const handelOpen = () => {
+      // ref.current.className = 'open';
+    state ==='close'?setState('open'): setState('close')
+    }
+
   return (
     <header className="bg-blue-500 opacity-95 flex justify-center items-center h-[10vh] wx-[100vw] sticky top-0">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <div className="flex justify-between items-center">
           <Link
-            className="text-white text-3xl flex gap-4 items-center transition-all duration-200 hover:text-yellow-200 "
+            className="text-white p-6 text-3xl flex gap-4 items-center transition-all duration-200 hover:text-yellow-200 "
             href={'/'}
           >
             <GiFilmSpool className="text-[3rem]" />
-            <div className="transition-all duration-200 hover:text-yellow-200">
+            <div className="transition-all duration-200 hover:text-yellow-200 ">
               تماشاخانه
             </div>
           </Link>
-          <nav>
+          <nav className="hidden md:block">
             <ul className="flex justify-center items-center gap-4">
               <li>
                 <Link
@@ -36,8 +47,19 @@ const Header = () => {
           </nav>
         </div>
       </div>
+
+      <section 
+        className={` hamberger ${state} flex flex-col md:hidden p-6 relative items-center`}
+        // ref={ref}
+        onClick={handelOpen}
+      >
+        <span className="hamber-top rounded transition-all duration-1000"></span>
+        <span className="hamber-mid rounded transition-all duration-1000"></span>
+        <span className="hamber-bot rounded transition-all duration-1000"></span>
+      </section>
+
     </header>
+
   );
 };
-
 export default Header;
