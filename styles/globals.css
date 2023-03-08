@@ -29,7 +29,7 @@ a {
 
 .hamber-top,.hamber-mid,.hamber-bot{
   width:32px;
-  height:3px;
+  height:2px;
   background:white;
   position:absolute;
   top:15px;
@@ -56,18 +56,14 @@ a {
   transform:rotate(-45deg) 
 }
 
-.close{
-  transform:rotate(0deg)
-}
-.close .hamber-top{
-  transform:rotate(0deg) 
+.close .hamber-bot{
+  transform:rotate(0deg) translateY(14px) 
 }
 .close .hamber-mid{
   display:block
 }
-.close .hamber-bot{
-  transform:rotate(0deg) translateY(14px)
-  
+.close .hamber-top{
+  transform:rotate(0deg) 
 }
 
 @tailwind base;

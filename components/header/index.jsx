@@ -1,14 +1,11 @@
 'use client';
-import React from 'react';
+
 import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
 import { useState } from 'react';
 const Header = () => {
   const [state,setState]=useState('close')
-  // const ref = React.createRef();
-
   const handelOpen = () => {
-      // ref.current.className = 'open';
     state ==='close'?setState('open'): setState('close')
     }
 
@@ -49,7 +46,7 @@ const Header = () => {
       </div>
 
       <section 
-        className={` hamberger ${state} flex flex-col md:hidden p-6 relative items-center`}
+        className={` hamberger ${state} flex flex-col md:hidden p-6 ml-2 relative items-center`}
         // ref={ref}
         onClick={handelOpen}
       >
