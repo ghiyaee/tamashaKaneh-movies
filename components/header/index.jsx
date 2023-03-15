@@ -24,7 +24,7 @@ const Header = () => {
               تماشاخانه
             </div>
           </Link>
-          <nav className={` ${state1} sm:block  `}>
+          <nav className={` ${state1} sm:block ml-5 `}>
             <ul className="flex justify-center items-center gap-4">
               <li>
                 <Link
