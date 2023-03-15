@@ -56,6 +56,12 @@ a {
   transform:rotate(-45deg) 
 }
 
+.show{
+display:block
+}
+.closer{
+display:none
+}
 .close .hamber-bot{
   transform:rotate(0deg) translateY(14px) 
 }

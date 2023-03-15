@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
 import { useState } from 'react';
 const Header = () => {
-  const [state,setState]=useState('close')
+  const [state, setState] = useState('close')
+    const [state1, setState1] = useState('closer');
   const handelOpen = () => {
-    state ==='close'?setState('open'): setState('close')
+    state === 'close' ? setState('open') : setState('close')
+     state1 === 'show' ? setState1('closer') : setState1('show');
     }
 
   return (
@@ -22,7 +24,7 @@ const Header = () => {
               تماشاخانه
             </div>
           </Link>
-          <nav className="hidden md:block">
+          <nav className={` ${state1} sm:block  `}>
             <ul className="flex justify-center items-center gap-4">
               <li>
                 <Link
@@ -45,7 +47,7 @@ const Header = () => {
         </div>
       </div>
 
-      <section 
+      <section
         className={` hamberger ${state} flex flex-col md:hidden p-6 ml-2 relative items-center`}
         // ref={ref}
         onClick={handelOpen}
@@ -54,9 +56,7 @@ const Header = () => {
         <span className="hamber-mid rounded transition-all duration-1000"></span>
         <span className="hamber-bot rounded transition-all duration-1000"></span>
       </section>
-
     </header>
-
   );
 };
 export default Header;

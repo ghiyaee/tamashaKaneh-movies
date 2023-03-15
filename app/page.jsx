@@ -2,12 +2,12 @@ import Slider from '@/components/slider';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// const dataMovies = async () => {
-//   const data = await fetch('https://moviesapi.ir/api/v1/movies?page={page}', {
-//     caches: 'no-store',
-//   });
-//   return data.json();
-// };
+const dataMovies = async () => {
+  const data = await fetch('https://moviesapi.ir/api/v1/movies?page={page}', {
+    caches: 'no-store',
+  });
+  return data.json();
+};
 
 const HomePage = async () => {
   const data = await dataMovies();

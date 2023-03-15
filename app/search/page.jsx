@@ -1,5 +1,4 @@
 'use client';
-import SearchBar from '@/components/serachbar';
 import Image from 'next/image';
 import {  useState } from 'react';
 
