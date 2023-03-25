@@ -1,7 +1,7 @@
 import Slider from '@/components/slider';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import {BsArrowUp }from 'react-icons/bs';
 const dataMovies = async () => {
   const data = await fetch('https://moviesapi.ir/api/v1/movies?page={page}', {
     caches: 'no-store',
@@ -50,7 +50,7 @@ const HomePage = async () => {
           href="#"
           class="capitalize fixed bg-yellow-300 w-7 h-7 flex items-center justify-center rounded-full right-3 bottom-3  font-medium shadow-4xl border border-blue-600 animate-ping"
         >
-          up
+          <BsArrowUp />
         </a>
       </div>
     </main>
