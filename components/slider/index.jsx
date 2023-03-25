@@ -74,7 +74,7 @@ const Slider = () => {
     };
   }, [counter]);
   return (
-    <div className="container mx-auto flex justify-center items-center h-[35rem] mt-8 ">
+    <div className="container mx-auto flex justify-center items-center h-[35rem] pt-8 ">
       <div className="relative ">
         <Image
           width={900}
