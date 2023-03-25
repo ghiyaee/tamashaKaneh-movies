@@ -12,7 +12,7 @@ const dataMovies = async () => {
 const HomePage = async () => {
   const data = await dataMovies();
   return (
-    <main className="bg-zinc-400 ">
+    <main className="bg-zinc-800 ">
       <>
         <title>تماشاخانه</title>
         <meta name="description" content="تماشاخانه" />
@@ -20,11 +20,11 @@ const HomePage = async () => {
       </>
 
       <Slider />
-      <div className="flex justify-center flex-wrap gap-8  p-8 ">
+      <div className="flex justify-center flex-wrap gap-10  p-8 ">
         {data.data.map((movie, i) => (
           <div
             key={i}
-            className="w-[25rem] h-[30rem] shadow-2xl rounded-lg  p-4 flex-col "
+            className="w-[25rem] h-[30rem] shadow-2xl shadow-amber-100 rounded-lg  p-4 flex-col "
           >
             <Link href={`/movies/${movie.id}`}>
               <div className="flex justify-center ">
@@ -39,7 +39,7 @@ const HomePage = async () => {
             </Link>
             <div className="text-lg text-center ">
               <h3 className="pt-4 text-bold text-red-50">{movie.title}</h3>
-              <div className="flex justify-between">
+              <div className="flex justify-between text-red-50">
                 <div className="">{movie.year}</div>
                 <div className="">{movie.country}</div>
               </div>
