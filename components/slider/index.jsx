@@ -68,7 +68,7 @@ const Slider = () => {
         setColor2('bg-red-100');
         setColor3('bg-red-100');
       }
-    }, 4500);
+    }, 2500);
     return () => {
       clearInterval(timer);
     };

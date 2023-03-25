@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
 import { useState } from 'react';
@@ -25,7 +24,7 @@ const Header = () => {
             </div>
           </Link>
           <nav
-            className={`${state1}  ml-5 transition-all duration-700`}
+            className={`${state1}  md:transform translateY(500px) ml-5 transition-all duration-700`}
           >
             <ul className="flex justify-center items-center gap-4">
               <li>
