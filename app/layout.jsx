@@ -5,11 +5,11 @@ import Footer from '@/components/footer';
 import Head from 'next/head';
 const BlogLayout = ({ children }) => {
   return (
-    <html lang="fa:IR">
-      <body >
+    <html lang="fa:IR" className="scroll-smooth">
+      <body>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

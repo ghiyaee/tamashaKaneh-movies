@@ -68,7 +68,7 @@ const Slider = () => {
         setColor2('bg-red-100');
         setColor3('bg-red-100');
       }
-    }, 2500);
+    }, 3000);
     return () => {
       clearInterval(timer);
     };
@@ -86,14 +86,14 @@ const Slider = () => {
         <span
           onClick={handelItemPriv}
           className="absolute bottom-[50%] trensfrom translate-y-[50%]
-         text-red-500 text-4xl m-4 cursor-pointer"
+         text-yellow-300 text-4xl m-4 cursor-pointer"
         >
           {'<'}
         </span>
         <span
           onClick={handelItemNext}
           className="absolute left-0 bottom-[50%] trensfrom translate-y-[50%]
-         text-red-500 text-4xl m-4 cursor-pointer"
+         text-yellow-300 text-4xl m-4 cursor-pointer"
         >
           {'>'}
         </span>
