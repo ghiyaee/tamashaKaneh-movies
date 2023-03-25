@@ -3,43 +3,43 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 const Slider = () => {
   const [state, setState] = useState([]);
-  let [color1, setColor1] = useState('bg-red-500');
-  let [color2, setColor2] = useState('bg-red-100');
-  let [color3, setColor3] = useState('bg-red-100');
+  let [color1, setColor1] = useState('bg-yellow-500');
+  let [color2, setColor2] = useState('bg-yellow-100');
+  let [color3, setColor3] = useState('bg-yellow-100');
   let [counter, setCounter] = useState(0);
   const handelItemNext = () => {
     if (counter < state.length - 1) {
       setCounter((prevConter) => prevConter + 1);
       if (counter === 0) {
-        setColor2('bg-red-500');
-        setColor1('bg-red-100');
+        setColor2('bg-yellow-500');
+        setColor1('bg-yellow-100');
       } else if (counter === 1) {
-        setColor3('bg-red-500');
-        setColor2('bg-red-100');
+        setColor3('bg-yellow-500');
+        setColor2('bg-yellow-100');
       }
     } else {
       setCounter(0);
-      setColor1('bg-red-500');
-      setColor2('bg-red-100');
-      setColor3('bg-red-100');
+      setColor1('bg-yellow-500');
+      setColor2('bg-yellow-100');
+      setColor3('bg-yellow-100');
     }
   };
   const handelItemPriv = () => {
     if (counter > 0) {
       setCounter((prevConter) => prevConter - 1);
       if (counter === 1) {
-        setColor2('bg-red-100');
-        setColor1('bg-red-500');
+        setColor2('bg-yellow-100');
+        setColor1('bg-yellow-500');
       }
       if (counter === 2) {
-        setColor3('bg-red-100');
-        setColor2('bg-red-500');
+        setColor3('bg-yellow-100');
+        setColor2('bg-yellow-500');
       }
     } else {
       setCounter(2);
       if (counter === 0) {
-        setColor1('bg-red-100');
-        setColor3('bg-red-500');
+        setColor1('bg-yellow-100');
+        setColor3('bg-yellow-500');
       }
     }
   };
@@ -56,17 +56,17 @@ const Slider = () => {
       if (counter < state.length - 1) {
         setCounter((prevConter) => prevConter + 1);
         if (counter === 0) {
-          setColor2('bg-red-500');
-          setColor1('bg-red-100');
+          setColor2('bg-yellow-500');
+          setColor1('bg-yellow-100');
         } else if (counter === 1) {
-          setColor3('bg-red-500');
-          setColor2('bg-red-100');
+          setColor3('bg-yellow-500');
+          setColor2('bg-yellow-100');
         }
       } else {
         setCounter(0);
-        setColor1('bg-red-500');
-        setColor2('bg-red-100');
-        setColor3('bg-red-100');
+        setColor1('bg-yellow-500');
+        setColor2('bg-yellow-100');
+        setColor3('bg-yellow-100');
       }
     }, 3000);
     return () => {
