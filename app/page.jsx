@@ -12,7 +12,7 @@ const dataMovies = async () => {
 const HomePage = async () => {
   const data = await dataMovies();
   return (
-    <main className="bg-zinc-800 ">
+    <main className="bg-[url('/bkfilm.avif')] bg-no-repeat bg-center bg-cover bg-fixed bg-opacity-50 ">
       <>
         <title>تماشاخانه</title>
         <meta name="description" content="تماشاخانه" />
@@ -48,7 +48,7 @@ const HomePage = async () => {
         ))}
         <a
           href="#"
-          class="capitalize fixed bg-yellow-300 w-7 h-7 flex items-center justify-center rounded-full right-3 bottom-3  font-medium shadow-4xl border border-blue-600 animate-ping"
+          class="capitalize fixed bg-yellow-300 w-7 h-7 flex items-center justify-center rounded-full right-5 bottom-5 font-medium shadow-4xl border border-blue-600 animate-ping"
         >
           <BsArrowUp />
         </a>
