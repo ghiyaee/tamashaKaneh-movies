@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,10 +6,9 @@
 
 html,
 body {
- font-family: yekan,sans-serif;
- direction: rtl;
+  font-family: yekan, sans-serif;
+  direction: rtl;
 }
-
 
 a {
   color: inherit;
@@ -20,57 +18,60 @@ a {
 @font-face {
   font-family: yekan;
   src: url('/BYekanv2.0/BYekan.woff');
-  font-display:block;
+  font-display: block;
 }
 
-.hiden{
-  display: none
+.hiden {
+  display: none;
 }
 
-.hamber-top,.hamber-mid,.hamber-bot{
-  width:32px;
-  height:2px;
-  background:white;
-  position:absolute;
-  top:15px;
+.hamber-top,
+.hamber-mid,
+.hamber-bot {
+  width: 32px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 15px;
 }
 
-.hamber-mid{
-  transform:translateY(7px);
+.hamber-mid {
+  transform: translateY(7px);
 }
-.hamber-bot{
-  transform:translateY(14px);
-}
-
-.open{
-  transform:rotate(90deg)
+.hamber-bot {
+  transform: translateY(14px);
 }
 
-.open .hamber-top{
-  transform:rotate(45deg) 
-}
-.open .hamber-mid{
-  display:none
-}
-.open .hamber-bot{
-  transform:rotate(-45deg) 
+.open {
+  transform: rotate(90deg);
 }
 
-.show{
-display:block
+.open .hamber-top {
+  transform: rotate(45deg);
 }
-.closer{
-display:none
+.open .hamber-mid {
+  display: none;
 }
-.close .hamber-bot{
-  transform:rotate(0deg) translateY(14px) 
+.open .hamber-bot {
+  transform: rotate(-45deg);
 }
-.close .hamber-mid{
-  display:block
+
+display:block .show {
+  transform: translateY(500px);
 }
-.close .hamber-top{
-  transform:rotate(0deg) 
+ .closer {
+  transform: translateY(-500px);
 }
+.close .hamber-bot {
+  transform: rotate(0deg) translateY(14px);
+}
+.close .hamber-mid {
+  display: block;
+}
+.close .hamber-top {
+  transform: rotate(0deg);
+}
+
 
 @tailwind base;
 @tailwind components;

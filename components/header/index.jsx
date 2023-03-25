@@ -4,15 +4,15 @@ import Link from 'next/link';
 import { GiFilmSpool } from 'react-icons/gi';
 import { useState } from 'react';
 const Header = () => {
-  const [state, setState] = useState('close')
-    const [state1, setState1] = useState('closer');
+  const [state, setState] = useState('close');
+  const [state1, setState1] = useState('closer');
   const handelOpen = () => {
-    state === 'close' ? setState('open') : setState('close')
-     state1 === 'show' ? setState1('closer') : setState1('show');
-    }
+    state === 'close' ? setState('open') : setState('close');
+    state1 === 'show' ? setState1('closer') : setState1('show');
+  };
 
   return (
-    <header className="bg-blue-500 opacity-95 flex justify-center items-center h-[10vh] wx-[100vw] sticky top-0">
+    <header className="bg-blue-500 opacity-95 flex justify-center items-center h-[10vh] wx-[100vw]  top-0">
       <div className="container mx-auto ">
         <div className="flex justify-between items-center">
           <Link
@@ -24,7 +24,9 @@ const Header = () => {
               تماشاخانه
             </div>
           </Link>
-          <nav className={` ${state1} sm:block ml-5 `}>
+          <nav
+            className={`${state1}  ml-5 transition-all duration-700`}
+          >
             <ul className="flex justify-center items-center gap-4">
               <li>
                 <Link

@@ -24,7 +24,7 @@ const SingelMovie = async ({ params }) => {
           <div>{` بازیگران :${movie.actors}`}</div>
         </div>
         <div>
-          <div className="drop-shadow-[5px_5px_5px_#ffb703] rounded-lg sm:w-[30rem] mt-4">
+          <div className="drop-shadow-[5px_5px_5px_#ffb703] rounded-lg sm:w-[30rem] mt-4 -z-10">
             {movie.id === 1 ? (
               <video className=" rounded-lg" controls>
                 <source src="/shash.mp4" />

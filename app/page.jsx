@@ -18,7 +18,7 @@ const HomePage = async () => {
         <meta name='description' content='تماشاخانه' />
         <link rel="shortcut icon" href='/iconee.png' type='image/x-icon' />
       </>
-      {/* <Slider/> */}
+      <Slider/>
       <div className="flex justify-center flex-wrap gap-8  p-8 ">
         {data.data.map((movie, i) => (
           <div
