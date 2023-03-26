@@ -1,4 +1,5 @@
 'use client';
+import Loading from '@/app/loading';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 const Slider = () => {
@@ -75,7 +76,8 @@ const Slider = () => {
   }, [counter]);
   return (
     <div className="container mx-auto flex justify-center items-center h-[35rem] pt-8 ">
-      <div className="relative ">
+      {state[counter] ?
+       <div className="relative ">
         <Image
           width={900}
           height={300}
@@ -102,7 +104,10 @@ const Slider = () => {
           <span className={`w-4 h-4 ${color2} rounded-full`}></span>
           <span className={`w-4 h-4 ${color3} rounded-full`}></span>
         </div>
-      </div>
+        </div> :
+        <Loading />
+      }
+     
     </div>
   );
 };

@@ -23,7 +23,6 @@ const Search = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-   
   };
 
   return (
