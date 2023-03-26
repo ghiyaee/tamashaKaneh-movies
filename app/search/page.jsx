@@ -1,23 +1,29 @@
 'use client';
 import Image from 'next/image';
-import {  useState } from 'react';
+import { useState } from 'react';
 
 const Search = () => {
   const [movieId, setMoviesId] = useState('');
-  const [movie,setMovies]=useState('')
+  const [movie, setMovies] = useState('');
 
   const fetchData = async () => {
-    const data = await fetch(`https://moviesapi.ir/api/v1/movies/${movieId}`, {
-      cache: 'no-cache',
-    });
-    const parsedData = await data.json();
-    setMovies(parsedData);
-    setMoviesId(' ')
+    if (movieId) {
+      const data = await fetch(
+        `https://moviesapi.ir/api/v1/movies/${movieId}`,
+        {
+          cache: 'no-cache',
+        }
+      );
+      const parsedData = await data.json();
+      setMovies(parsedData);
+      setMoviesId('');
+    }
+    return;
   };
 
   const handelSubmit = (e) => {
     e.preventDefault();
-        setMoviesId(' ');
+   
   };
 
   return (
