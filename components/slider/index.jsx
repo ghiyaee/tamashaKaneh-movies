@@ -54,7 +54,7 @@ const Slider = () => {
   }, []);
   useEffect(() => {
     const timer = setInterval(() => {
-      if (counter < state.length - 1) {
+      if (counter < 2) {
         setCounter((prevConter) => prevConter + 1);
         if (counter === 0) {
           setColor2('bg-yellow-500');
@@ -88,21 +88,21 @@ const Slider = () => {
         <span
           onClick={handelItemPriv}
           className="absolute bottom-[50%] trensfrom translate-y-[50%]
-         text-yellow-300 text-4xl m-4 cursor-pointer"
+         text-yellow-300 text-4xl m-4 cursor-pointer opacity-75"
         >
           {'<'}
         </span>
         <span
           onClick={handelItemNext}
           className="absolute left-0 bottom-[50%] trensfrom translate-y-[50%]
-         text-yellow-300 text-4xl m-4 cursor-pointer"
+         text-yellow-300 text-4xl m-4 cursor-pointer opacity-75"
         >
           {'>'}
         </span>
         <div className="flex justify-center gap-2 mt-3 ">
-          <span className={`w-4 h-4  ${color1} rounded-full`}></span>
-          <span className={`w-4 h-4 ${color2} rounded-full`}></span>
-          <span className={`w-4 h-4 ${color3} rounded-full`}></span>
+          <span className={`w-4 h-4 ${color1} rounded-full `}></span>
+          <span className={`w-4 h-4 ${color2} rounded-full `}></span>
+          <span className={`w-4 h-4 ${color3} rounded-full `}></span>
         </div>
         </div> :
         <Loading />

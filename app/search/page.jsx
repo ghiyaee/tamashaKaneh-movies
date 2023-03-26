@@ -1,10 +1,10 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Search = () => {
-  const [movieId, setMoviesId] = useState('');
-  const [movie, setMovies] = useState('');
+  const [movieId, setMoviesId] = useState(9);
+  const [movie, setMovies] = useState();
 
   const fetchData = async () => {
     if (movieId) {
@@ -20,7 +20,9 @@ const Search = () => {
     }
     return;
   };
-
+  useEffect(() => {
+  fetchData()
+})
   const handelSubmit = (e) => {
     e.preventDefault();
   };
