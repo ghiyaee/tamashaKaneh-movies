@@ -22,7 +22,7 @@ const Search = () => {
   };
   useEffect(() => {
   fetchData()
-})
+},[])
   const handelSubmit = (e) => {
     e.preventDefault();
   };
@@ -50,16 +50,17 @@ const Search = () => {
           <div>
             <div className="flex flex-col gap-5 p-8  m-5 ">
               <div>
-                <div className="flex justify-center flex-wrap gap-7 items-center">
-                  <div className="text-2xl ">
-                    <h1 className="mb-4">{`نام فلیم :${movie.title}`}</h1>
-                    <div className="mb-4">{`سال ساخت :${movie.year}`}</div>
-                    <div className="mb-4">{`کشور سازنده :${movie.country}`}</div>
-                    <div className="mb-4">{`امتیاز کسب شده :${movie.imdb_rating}`}</div>
-                    <div className="mb-4">{`ژانر فلیم :${movie.genres}`}</div>
-                    <div className="mb-4">{` بازیگران :${movie.actors}`}</div>
-                    <div className="mb-4">{` داستان فیلم :${movie.plot}`}</div>
+                <div className="flex justify-center flex-wrap gap-7 items-center ">
+                  <div className="w-[40rem] flex justify-center">
+                    <Image
+                      alt="img"
+                      width={350}
+                      height={200}
+                      src={movie.poster}
+                      className=" rounded-lg"
+                    />
                   </div>
+
                   <div className=" ">
                     {movie
                       ? movie?.images?.map((img) => (
@@ -73,14 +74,15 @@ const Search = () => {
                         ))
                       : ''}
                   </div>
-                  <div className="w-[40rem] flex justify-center">
-                    <Image
-                      alt="img"
-                      width={350}
-                      height={200}
-                      src={movie.poster}
-                      className=" rounded-lg"
-                    />
+
+                  <div className="text-2xl ">
+                    <h1 className="mb-4">{`نام فلیم :${movie.title}`}</h1>
+                    <div className="mb-4">{`سال ساخت :${movie.year}`}</div>
+                    <div className="mb-4">{`کشور سازنده :${movie.country}`}</div>
+                    <div className="mb-4">{`امتیاز کسب شده :${movie.imdb_rating}`}</div>
+                    <div className="mb-4">{`ژانر فلیم :${movie.genres}`}</div>
+                    <div className="mb-4">{` بازیگران :${movie.actors}`}</div>
+                    <div className="mb-4">{` داستان فیلم :${movie.plot}`}</div>
                   </div>
                 </div>
               </div>
