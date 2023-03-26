@@ -69,7 +69,7 @@ const Slider = () => {
         setColor2('bg-yellow-100');
         setColor3('bg-yellow-100');
       }
-    }, 3000);
+    }, 4000);
     return () => {
       clearInterval(timer);
     };
@@ -87,15 +87,13 @@ const Slider = () => {
         />
         <span
           onClick={handelItemPriv}
-          className="absolute bottom-[50%] trensfrom translate-y-[50%]
-         text-yellow-300 text-4xl m-4 cursor-pointer opacity-75"
+          className="priv"
         >
           {'<'}
         </span>
         <span
           onClick={handelItemNext}
-          className="absolute left-0 bottom-[50%] trensfrom translate-y-[50%]
-         text-yellow-300 text-4xl m-4 cursor-pointer opacity-75"
+          className="next"
         >
           {'>'}
         </span>
