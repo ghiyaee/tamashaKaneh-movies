@@ -12,10 +12,12 @@ const Search = () => {
     });
     const parsedData = await data.json();
     setMovies(parsedData);
+    setMoviesId(' ')
   };
 
   const handelSubmit = (e) => {
     e.preventDefault();
+        setMoviesId(' ');
   };
 
   return (
@@ -26,6 +28,7 @@ const Search = () => {
             placeholder="برای دیدن فیلم از1 تا 50 واردکنید"
             className="outline-none w-96 p-4 shadow-2xl"
             onChange={(e) => setMoviesId(e.target.value)}
+            value={movieId}
           />
           <button
             className="bg-red-500 text-white px-4 py-1  rounded-md"
@@ -35,7 +38,7 @@ const Search = () => {
           </button>
         </form>
       </section>
-      <main className="mt-8 bg-black text-white rounded-lg">
+      <main className="mt-8 bg-black text-white ">
         {movie ? (
           <div>
             <div className="flex flex-col gap-5 p-8  m-5 ">
@@ -52,7 +55,7 @@ const Search = () => {
                   </div>
                   <div className=" ">
                     {movie
-                      ? movie.images.map((img) => (
+                      ? movie?.images?.map((img) => (
                           <Image
                             alt="img"
                             width={350}
