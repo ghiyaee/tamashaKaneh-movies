@@ -91,3 +91,7 @@ display:block .show {
 .header-items{
 @apply w-20 h-8 text-lg font-bold bg-white  rounded-md transition-all duration-200 hover:bg-yellow-200
 }
+.up-to-top{
+@apply capitalize fixed bg-yellow-300 w-7 h-7 flex items-center justify-center rounded-full 
+right-5 bottom-5 font-medium  border border-blue-600 animate-ping
+}

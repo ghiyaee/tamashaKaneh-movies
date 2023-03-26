@@ -48,7 +48,7 @@ const HomePage = async () => {
         ))}
         <a
           href="#"
-          class="capitalize fixed bg-yellow-300 w-7 h-7 flex items-center justify-center rounded-full right-5 bottom-5 font-medium shadow-4xl border border-blue-600 animate-ping"
+          className="up-to-top"
         >
           <BsArrowUp />
         </a>

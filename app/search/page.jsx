@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
+import { BsArrowUp } from 'react-icons/bs';
 const Search = () => {
   const [movieId, setMoviesId] = useState(9);
   const [movie, setMovies] = useState();
@@ -60,7 +60,6 @@ const Search = () => {
                       className=" rounded-lg"
                     />
                   </div>
-
                   <div className="text-2xl ">
                     <h1 className="mb-4">{`نام فلیم :${movie.title}`}</h1>
                     <div className="mb-4">{`سال ساخت :${movie.year}`}</div>
@@ -70,7 +69,6 @@ const Search = () => {
                     <div className="mb-4">{` بازیگران :${movie.actors}`}</div>
                     <div className="mb-4">{` داستان فیلم :${movie.plot}`}</div>
                   </div>
-
                   <div className="flex gap-8 flex-col flex-wrap sm:flex-row justify-center">
                     {movie?.images?.map((img) => (
                       <Image
@@ -90,6 +88,12 @@ const Search = () => {
         ) : (
           ''
         )}
+        <a
+          href="#"
+          className="up-to-top text-black"
+        >
+          <BsArrowUp />
+        </a>
       </main>
     </>
   );
