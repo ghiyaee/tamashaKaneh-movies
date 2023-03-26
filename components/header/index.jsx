@@ -26,10 +26,10 @@ const Header = () => {
           <nav
             className={`${state1}  md:transform translateY(500px) ml-5 transition-all duration-700`}
           >
-            <ul className="flex justify-center items-center gap-4">
+            <ul className="flexs gap-4">
               <li>
                 <Link
-                  className="w-20 h-8 text-lg font-bold bg-white flex justify-center items-center rounded-md transition-all duration-200 hover:bg-yellow-200"
+                  className=" flexs header-items"
                   href={'/'}
                 >
                   خانه
@@ -37,7 +37,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  className="w-20 h-8 text-lg font-bold bg-white flex justify-center items-center rounded-md transition-all duration-200 hover:bg-yellow-200 "
+                  className=" flexs header-items "
                   href={'/search'}
                 >
                   جستجو

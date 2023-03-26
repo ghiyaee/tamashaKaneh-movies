@@ -50,7 +50,7 @@ const Search = () => {
           <div>
             <div className="flex flex-col gap-5 p-8  m-5 ">
               <div>
-                <div className="flex justify-center flex-wrap gap-7 items-center ">
+                <div className="flexs flex-wrap gap-7 ">
                   <div className="w-[40rem] flex justify-center">
                     <Image
                       alt="img"
@@ -61,20 +61,6 @@ const Search = () => {
                     />
                   </div>
 
-                  <div className=" ">
-                    {movie
-                      ? movie?.images?.map((img) => (
-                          <Image
-                            alt="img"
-                            width={350}
-                            height={250}
-                            src={img}
-                            className="transition-all duration-1000 hover:scale-125 rounded-lg mb-6 "
-                          />
-                        ))
-                      : ''}
-                  </div>
-
                   <div className="text-2xl ">
                     <h1 className="mb-4">{`نام فلیم :${movie.title}`}</h1>
                     <div className="mb-4">{`سال ساخت :${movie.year}`}</div>
@@ -83,6 +69,19 @@ const Search = () => {
                     <div className="mb-4">{`ژانر فلیم :${movie.genres}`}</div>
                     <div className="mb-4">{` بازیگران :${movie.actors}`}</div>
                     <div className="mb-4">{` داستان فیلم :${movie.plot}`}</div>
+                  </div>
+
+                  <div className="flex gap-8 flex-col flex-wrap sm:flex-row justify-center">
+                    {movie?.images?.map((img) => (
+                      <Image
+                        alt="img"
+                        width={350}
+                        height={250}
+                        src={img}
+                        className="img"
+                        key={img}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>

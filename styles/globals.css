@@ -82,3 +82,12 @@ display:block .show {
 @apply absolute left-0 bottom-[50%]  translate-y-[50%] 
  text-yellow-300 text-4xl m-4 cursor-pointer opacity-75
 }
+.img{
+@apply transition-all duration-1000 hover:scale-125 rounded-lg mb-6 mx-4
+}
+.flexs{
+@apply flex justify-center items-center
+}
+.header-items{
+@apply w-20 h-8 text-lg font-bold bg-white  rounded-md transition-all duration-200 hover:bg-yellow-200
+}
