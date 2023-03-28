@@ -7,9 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const Search = () => {
   const [movieId, setMoviesId] = useState(9);
   const [movie, setMovies] = useState();
-  const notify = () => toast('!!! باید عدد وارد کنید');
+  const notify = () => toast('عددباید بین 1 تا 250 باشد');
   const fetchData = async () => {
-    if (movieId) {
+    if (movieId && movieId <= Number(250)) {
       const data = await fetch(
         `https://moviesapi.ir/api/v1/movies/${movieId}`,
         {
@@ -18,18 +18,17 @@ const Search = () => {
       );
       const parsedData = await data.json();
       setMovies(parsedData);
-      setMoviesId('');
     }
-    else {
-      return
+    else if(movieId > 250){
+      notify()
+      setMoviesId('');
     }
   };
   useEffect(() => {
     fetchData();
-  },[movieId]);
+  });
   const handelSubmit = (e) => {
     e.preventDefault();
-    //  notify();
   };
 
   return (
