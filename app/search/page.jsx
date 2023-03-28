@@ -21,7 +21,7 @@ const Search = () => {
     }
     else if(movieId > 250){
       notify()
-      setMoviesId('');
+ 
     }
   };
   useEffect(() => {
