@@ -2,10 +2,12 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { BsArrowUp } from 'react-icons/bs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Search = () => {
   const [movieId, setMoviesId] = useState(9);
   const [movie, setMovies] = useState();
-
+  const notify = () => toast('!!! باید عدد وارد کنید');
   const fetchData = async () => {
     if (movieId) {
       const data = await fetch(
@@ -18,31 +20,27 @@ const Search = () => {
       setMovies(parsedData);
       setMoviesId('');
     }
-    return;
+    else {
+      return
+    }
   };
   useEffect(() => {
-  fetchData()
-},[])
+    fetchData();
+  },[movieId]);
   const handelSubmit = (e) => {
     e.preventDefault();
+    //  notify();
   };
 
   return (
     <>
       <section className=" text-xl rounded-md p-4">
-        <form onSubmit={handelSubmit} className="flex justify-center flex-wrap">
+        <form onSubmit={handelSubmit} className="flex justify-center flex-wrap ">
           <input
-            placeholder="برای دیدن فیلم از1 تا 50 واردکنید"
-            className="outline-none w-96 p-4 shadow-2xl"
+            placeholder="برای دیدن فیلم از عدد 1 تا 250 واردکنید"
+            className="outline-none w-96 p-4 shadow-2xl focus"
             onChange={(e) => setMoviesId(e.target.value)}
-            value={movieId}
           />
-          <button
-            className="bg-red-500 text-white px-4 py-1  rounded-md"
-            onClick={fetchData}
-          >
-            جستجو
-          </button>
         </form>
       </section>
       <main className="mt-8 bg-black text-white ">
@@ -88,12 +86,12 @@ const Search = () => {
         ) : (
           ''
         )}
-        <a
-          href="#"
-          className="up-to-top text-black"
-        >
+        <a href="#" className="up-to-top text-black">
           <BsArrowUp />
         </a>
+        <div>
+          <ToastContainer position="top-center" className="text-3xl " />
+        </div>
       </main>
     </>
   );

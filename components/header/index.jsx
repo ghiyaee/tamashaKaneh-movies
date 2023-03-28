@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-zinc-800 opacity-95 flex justify-center items-center h-[10vh] wx-[100vw] sticky top-0 z-50">
+    <header className="bg-zinc-800 opacity-95 flex justify-center items-center h-[10vh] wx-[100vw] sticky top-0 z-50 ">
       <div className="container mx-auto ">
         <div className="flex justify-between items-center">
           <Link
