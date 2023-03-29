@@ -1,4 +1,4 @@
-import Search from "@/components/search";
+
 const Movies = () => {
     return (
       <div className="flex justify-center items-center p-8 text-7xl h-[70vh]">
