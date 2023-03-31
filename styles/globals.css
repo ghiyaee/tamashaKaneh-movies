@@ -60,10 +60,10 @@ a {
 }
 
 display:block .show {
-  transform: translateY(500px);
+  transform: translateY(800px);
 }
  .closer {
-  transform: translateY(-500px);
+  transform: translateY(-800px);
 }
 .close .hamber-bot {
   transform: rotate(0deg) translateY(14px);
