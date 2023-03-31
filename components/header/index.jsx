@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-zinc-800 opacity-95 flex  items-center  h-[30vh] sm:h-[10vh] w-[100vw] sticky top-0 z-50 ">
+    <header className="bg-zinc-800 opacity-95 flex  items-center  h-[20vh] sm:h-[10vh] w-[100vw] sticky top-0 z-50 ">
       <div className="container mx-auto mt-6 sm:mt-0">
         <div className="flex justify-around sm:justify-between items-center">
           <Link
@@ -48,7 +48,7 @@ const Header = () => {
         </div>
 
       <section
-        className={` hamberger ${state} flex flex-col md:hidden p-6 relative items-center `}
+        className={` hamberger ${state} flex flex-col md:hidden p-6 mb-4 relative items-center `}
         // ref={ref}
         onClick={handelOpen}
       >
