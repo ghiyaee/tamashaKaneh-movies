@@ -11,8 +11,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-zinc-800 opacity-95 flex  items-center h-[15vh] w-[100vw] sticky top-0 z-50 ">
-      <div className="container mx-auto ">
+    <header className="bg-zinc-800 opacity-95 flex  items-center  h-[30vh] sm:h-[10vh] w-[100vw] sticky top-0 z-50 ">
+      <div className="container mx-auto mt-6 sm:mt-0">
         <div className="flex justify-around sm:justify-between items-center">
           <Link
             className="text-white p-6 text-3xl flex gap-4 items-center transition-all duration-200 hover:text-yellow-200 "
@@ -26,7 +26,7 @@ const Header = () => {
           <nav
             className={`${state1}  md:transform translateY(500px) ml-5 transition-all duration-700`}
           >
-            <ul className="flexs gap-4">
+            <ul className="flexs gap-1">
               <li>
                 <Link
                   className=" flexs header-items"
@@ -48,7 +48,7 @@ const Header = () => {
         </div>
 
       <section
-        className={` hamberger ${state} flex flex-col md:hidden p-6 relative items-center`}
+        className={` hamberger ${state} flex flex-col md:hidden p-6 relative items-center `}
         // ref={ref}
         onClick={handelOpen}
       >
